@@ -1,13 +1,19 @@
 <!-- index.ejs -->
+<!-- the < %, % > allows us to use JS within the EJS file -->
+<!-- In order to output a variable as a value, we use the < %= %> -->
+<!--  to use an include use the < %- %> tag-->
 <html>
   <head>
     <title>Homepage</title>
   </head>
   <body>
+    <!-- To insert such components into your pages, we make use of the include command.  -->
+    <!-- This requires the name of the file to be inserted, and  -->
+    <!-- optionally an object of data you wish to pass -->
     <%- include('navbar', {links: links}) %>
     <ul>
       <% users.forEach((user) => { %>
-        <%- include('user', {user: user}); %>
+        <%- include('users/user', {user: user}); %>
       <% }); %>
     </ul>
     
