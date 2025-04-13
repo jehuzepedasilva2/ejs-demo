@@ -12,6 +12,12 @@ const app = express();
 app.set("views", path.join(__dirname, "views")); //..ejs-demo/views
 app.set("view engine", "ejs");
 
+// ! for css files, express.static() is a middleware function that enables the use of static assets, 
+// !and we tell it to look for assets with the public directory as the root.
+const assetsPath = path.join(__dirname, "public");
+app.use(express.static(assetsPath));
+
+
 //! Since we’ve already defined the views and view engine app properties, the first argument of
 //! res.render is programmed to look for “a template called index in the specified folder”, 
 //! while the second argument is an object of variables that are to be made available to that specific template.
