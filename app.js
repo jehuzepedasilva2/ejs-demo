@@ -6,6 +6,8 @@ const path = require('node:path');
 const express = require('express');
 const app = express();
 
+//? STEP 1: npm install ejs
+//? STEP 2: create views folder and then set app "views" and "view engine" properties to __dirname/views, and ejs respectively
 //! set maps first argument to second argument and be retrieved using get
 app.set("views", path.join(__dirname, "views")); //..ejs-demo/views
 app.set("view engine", "ejs");
