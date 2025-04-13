@@ -5,22 +5,54 @@
 }
 
 body {
+  position: relative;
   width: 100vw;
   height: 100vh;
 
+  color: white;
+
+  row-gap: 0;
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-areas: 
+  "navbar"
+  "list"
+  "foot";
+}
+
+#nav-01 {
+  background-color: lightblue;
+  grid-area: navbar;
   padding: 10px;
+
+  display: flex;
+  justify-content: flex-end;
 }
 
 #nav-01 > ul {
-  text-decoration: none;
-  color: black;
   list-style: none;
   display: flex;
   gap: 20px;
   justify-content: flex-end;
-  padding: 10px;
+  align-items: center;
+  padding-right: 10px;
 }
 
-.user-list {
-  padding: 10px;
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.user-list, h2 {
+  padding: 20px;
+  grid-area: list;
+  background-color: rgb(163, 211, 227);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: foot;
+  background-color: rgb(152, 206, 223);
 }

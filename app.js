@@ -32,10 +32,24 @@ const links = [
   { href: "about", text: "About" },
 ];
 
-const users = ["Rose", "Cake", "Biff"];
+const users = [
+  {
+    name: "Rose",
+  }, 
+  {
+    name: "Cake",
+  }, 
+  {
+    name: "Biff",
+  }
+];
 
 app.get("/", (req, res) => {
   res.render("index", { links: links, users: users });
+});
+
+app.get("/about", (req, res) => {
+  res.render("about", { links: links });
 });
 
 
