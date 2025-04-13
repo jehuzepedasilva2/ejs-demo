@@ -9,11 +9,9 @@ body {
   width: 100vw;
   height: 100vh;
 
-  color: white;
-
   row-gap: 0;
   display: grid;
-  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-rows: 1fr 10fr 2fr;
   grid-template-areas: 
   "navbar"
   "list"
@@ -21,12 +19,13 @@ body {
 }
 
 #nav-01 {
-  background-color: lightblue;
   grid-area: navbar;
   padding: 10px;
 
   display: flex;
   justify-content: flex-end;
+
+  background-color: cadetblue;
 }
 
 #nav-01 > ul {
@@ -39,14 +38,13 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 
 .user-list, h2 {
   padding: 20px;
   grid-area: list;
-  background-color: rgb(163, 211, 227);
 }
 
 footer {
@@ -54,5 +52,6 @@ footer {
   justify-content: center;
   align-items: center;
   grid-area: foot;
-  background-color: rgb(152, 206, 223);
+  background-color: cadetblue;
+  color: white;
 }
