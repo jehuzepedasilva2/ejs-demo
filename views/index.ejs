@@ -12,7 +12,7 @@
     <!-- This requires the name of the file to be inserted, and  -->
     <!-- optionally an object of data you wish to pass -->
     <%- include('navbar', {links: links}) %>
-    <ul>
+    <ul class="user-list">
       <% users.forEach((user) => { %>
         <%- include('users/user', {user: user}); %>
       <% }); %>

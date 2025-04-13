@@ -1,3 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  color: red;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 10px;
+}
+
+#nav-01 > ul {
+  text-decoration: none;
+  color: black;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.user-list {
+  padding: 10px;
 }
